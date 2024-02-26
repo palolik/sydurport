@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
 
 </head>
 
-<body class="bg-gradient-to-r to-[#011092] from-[#160040]">
+<body class="w-svw bg-gradient-to-r to-[#011092] from-[#160040]">
     <!-- home page starts here -->
     <div class="navbar bg-gradient-to-r to-[#011092] from-[#160040] ">
         <div class="flex-1">
@@ -75,15 +75,82 @@
             </div>
         </div>
         <div class="lg:w-1/2 md:w-2/3 w-full flex lg:ml-40 md:ml-10">
-            <img class="w-screen h-1/2" src="images/test.png" alt="">
+            <img class="w-screen h-1/2 lg:h-full lg:w-fit" src="images/test.png" alt="">
         </div>
 
 
     </sector>
-    <sector>
-        <div>Skills and Qualities</div>
-        <div class="flex flex-col items-center">
-            <div class="card w-96 bg-gradient-to-r to-[#011092] from-[#160040] shadow-xl border-2 border-cyan-500 text-white">
+    <sector class=" lg:h-screen flex flex-col items-center lg:justify-start ">
+        <div class="text-4xl text-cyan-300 mb-8 lg:m-20 lg:text-6xl">Research</div>
+        <div
+            class="flex  w-11/12 flex-col items-center lg:flex-col lg:justify-center md:flex-row border-2 border-red-50">
+            <div class="carousel w-full h-[600px]">
+                <div id="item1" class="carousel-item w-full">
+                    <!-- <img src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" class="w-full" /> -->
+                    <div class="flex flex-row ">
+                        <div class="w-1/3"><img src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
+                                class="w-full h-full" /></div>
+                        <div class="w-2/3 text-white m-10">
+                            <p class="text-3xl mb-5">OPTIMIZATION OF MICRORING RESONATOR FOR ULTRAFAST OPTICS IN COMSOL MULTIPHYSICS</p>
+                            <p class="text-lg">Solar spectrum is supposed to be a key source of renewable energy in the form of
+                                electromagnetic (EM) radiation. For efficiently harnessing this abundant energy,
+                                Metamaterial Absorber (MMA) emerges as a game-changing tool. Along with solar energy
+                                harvesting, MMA can be used in biochemical sensors, optical modulators, magnetic
+                                resonance imaging, photoelectric detectors, plasmonic sensors, etc. In this paper, a sun
+                                shape resonator-based MMA is designed with three layers of materials (W-SiO 2 -W) and
+                                analysed for broadband absorption encompassing the entire visible region (390-760nm).
+                                The unit cell that is presented in this study is polarization-insensitive and ultrathin
+                                with an average absorption of 96.43% with an optimum peak of 99.99% at 523.22nm. The
+                                proposed MMA exhibits satisfactory absorption under various oblique angles. The effect
+                                of mechanical loading is also investigated and the MMA is found to hold good broadband
+                                absorbance for some extents of mechanical bending. Finite Integration Technique (FIT) is
+                                used to numerically simulate the proposed MMA unit cell structure and validated with the
+                                Finite Element Method (FEM). The suggested MMA in this paper can be used in many optical
+                                applications like efficient nano solar cells, imaging applications, sensors, light
+                                detectors, biochemical applications, etc</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="item2" class="carousel-item w-full">
+                    <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" class="w-full" />
+                </div>
+                <div id="item3" class="carousel-item w-full">
+                    <img src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" class="w-full" />
+                </div>
+                <div id="item4" class="carousel-item w-full">
+                    <img src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" class="w-full" />
+                </div>
+            </div>
+            <!-- <div class="flex justify-center w-full py-2 gap-2">
+                <a href="#item1" class="btn btn-xs">1</a> 
+                <a href="#item2" class="btn btn-xs">2</a> 
+                <a href="#item3" class="btn btn-xs">3</a> 
+                <a href="#item4" class="btn btn-xs">4</a>
+              </div> -->
+        </div>
+    </sector>
+    <sector class=" lg:h-screen flex flex-col items-center lg:justify-start ">
+        <div class="text-4xl text-cyan-300 mb-8 lg:m-20 lg:text-6xl">Skills and Qualities</div>
+        <div class="flex flex-wrap flex-col items-center lg:flex-row md:flex-row">
+            <div
+                class="card  w-11/12 mb-4 lg:w-80 lg:h-[400px] lg:m-5 bg-gradient-to-r to-[#011092] from-[#160040] shadow-xl border-2 border-cyan-500 text-white">
+                <div class="card-body">
+                    <img class="w-16 h-16" src="https://cdn-icons-png.flaticon.com/512/4228/4228953.png">
+
+                    <h2 class="card-title">Design & Simulation Software</h2>
+                    <ul>
+                        <li>COMSOL Multiphysics</li>
+                        <li>CST Microwave Studio</li>
+                        <li>ANSYS HFSS</li>
+                        <li>MATLAB</li>
+                        <li>Fritzing</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div
+                class="card  w-11/12 mb-4 lg:max-w-80 lg:h-[400px] lg:m-5 lg:mt-32  bg-gradient-to-r to-[#011092] from-[#160040] shadow-xl border-2 border-cyan-500 text-white">
                 <div class="card-body">
                     <img class="w-10 h-10" src="https://cdn-icons-png.flaticon.com/512/4228/4228953.png">
 
@@ -98,7 +165,8 @@
 
                 </div>
             </div>
-            <div class="card w-96 bg-gradient-to-r to-[#011092] from-[#160040] shadow-xl border-2 border-cyan-500 text-white">
+            <div
+                class="card  w-11/12 mb-4 lg:w-80 lg:h-[400px] lg:m-5 bg-gradient-to-r to-[#011092] from-[#160040] shadow-xl border-2 border-cyan-500 text-white">
                 <div class="card-body">
                     <img class="w-10 h-10" src="https://cdn-icons-png.flaticon.com/512/4228/4228953.png">
 
@@ -113,22 +181,8 @@
 
                 </div>
             </div>
-            <div class="card w-96 bg-gradient-to-r to-[#011092] from-[#160040] shadow-xl border-2 border-cyan-500 text-white">
-                <div class="card-body">
-                    <img class="w-10 h-10" src="https://cdn-icons-png.flaticon.com/512/4228/4228953.png">
-
-                    <h2 class="card-title">Design & Simulation Software</h2>
-                    <ul>
-                        <li>COMSOL Multiphysics</li>
-                        <li>CST Microwave Studio</li>
-                        <li>ANSYS HFSS</li>
-                        <li>MATLAB</li>
-                        <li>Fritzing</li>
-                    </ul>
-
-                </div>
-            </div>
-            <div class="card w-96 bg-gradient-to-r to-[#011092] from-[#160040] shadow-xl border-2 border-cyan-500 text-white">
+            <div
+                class="card  w-11/12 mb-4 lg:w-80 lg:h-[400px] lg:m-5 lg:mt-32 bg-gradient-to-r to-[#011092] from-[#160040] shadow-xl border-2 border-cyan-500 text-white">
                 <div class="card-body">
                     <img class="w-10 h-10" src="https://cdn-icons-png.flaticon.com/512/4228/4228953.png">
 
@@ -145,9 +199,82 @@
             </div>
         </div>
     </sector>
-    <sector>3</sector>
-    <sector>5</sector>
-    <sector>6</sector>
+    <sector class=" lg:h-screen flex flex-col items-center lg:justify-start ">
+        <div class="text-4xl text-cyan-300 mb-8 lg:m-20 lg:text-6xl">Projects</div>
+        <div class="flex  w-11/12 flex-col items-center lg:flex-row lg:justify-center md:flex-row">
+            <div class="carousel carousel-center w-11/12 lg:w-2/3 md:w-2/3 p-4 space-x-4 ">
+                <div class="carousel-item w-11/12 lg:w-1/3">
+                    <!-- <img src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg" class="rounded-box" /> -->
+                    <div
+                        class="card  lg:w-96 lg:h-[500px] text-white bg-gradient-to-r to-[#011092] from-[#160040]  shadow-xl">
+                        <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Internet of Things (IoT) Based Low Cost Smart Agricultural System In
+                                Mymensingh Easy to use Web-app for farmers</h2>
+                            <p>Hardware implementation by NodeMCU Esp8266</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item w-11/12 lg:w-1/3">
+                    <!-- <img src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg" class="rounded-box" /> -->
+                    <div
+                        class="card w-96 lg:h-[500px] text-white bg-gradient-to-r to-[#011092] from-[#160040]  shadow-xl">
+                        <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Shoes!</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item w-11/12 lg:w-1/3">
+                    <!-- <img src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg" class="rounded-box" /> -->
+                    <div
+                        class="card bg-gradient-to-r to-[#011092] from-[#160040] w-96 lg:h-[500px] text-white  shadow-xl">
+                        <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Shoes!</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item w-11/12 lg:w-1/3">
+                    <!-- <img src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg" class="rounded-box" /> -->
+                    <div
+                        class="card w-96 lg:h-[500px] text-white bg-gradient-to-r to-[#011092] from-[#160040] shadow-xl">
+                        <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Shoes!</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item w-11/12 lg:w-1/3">
+                    <!-- <img src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg" class="rounded-box" /> -->
+                    <div class="card w-96 bg-gradient-to-r to-[#011092] from-[#160040] shadow-xl">
+                        <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Shoes!</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </sector>
+
+    <sector></sector>
     <sector>7</sector>
 </body>
 <script>
