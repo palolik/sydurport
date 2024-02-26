@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gradient-to-r to-[#011092] from-[#160040]">
+    <!-- home page starts here -->
+    <div class="navbar bg-gradient-to-r to-[#011092] from-[#160040] ">
+        <div class="flex-1">
+            <a class="lg:text-4xl text-2xl md:text-4xl text-blue-400">Sydur Rahman</a>
+        </div>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal px-1 hidden lg:flex md:flex text-xl text-blue-400">
+                <li><a>Home</a></li>
+                <li><a>About Me</a></li>
+                <li><a>Research</a></li>
+                <li><a>Projects</a></li>
+                <li><a id="nextButton" onclick="floatingBox()">Log in</a>
+                </li>
+
+            </ul>
+            <ul class="menu menu-horizontal px-1 flex lg:hidden md:hidden">
+
+                <li>
+                    <details>
+                        <summary class="lg:text-4xl text-xl md:text-4xl text-blue-400">
+                            Menu
+                        </summary>
+                        <ul
+                            class=" bg-gradient-to-r from-cyan-900 to-blue-900 lg:text-4xl text-xl md:text-4xl text-blue-400">
+                            <li><a>Home</a></li>
+                            <li><a>About Me</a></li>
+                            <li><a>Research</a></li>
+                            <li><a>Projects</a></li>
+                            <li><a id="nextButton" onclick="floatingBox()">Log in</a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <sector class="w-screen h-screen flex lg:flex-row md:flex-row flex-col">
+
+        <div class="mx-2 w-full md:w-1/2 lg:w-1/2 lg:ml-24 lg:mt-24 md:ml-12 md:mt-12">
+            <div class="text-4xl md:text-6xl lg:text-8xl text-cyan-500 font-extrabold">Resercher and Author</div>
+            <div class="text-lg md:text-lg  lg:text-xl text-cyan-200 font-semibold">Research experience in
+                metamaterials,
+                microring resonators, and photonics. Skilled in CST microwave studio, COMSOL multiphysics, Lumerical,
+                etc. photonics simulator software. Further skilled in MATLAB and programming languages like C, Python,
+                PHP, etc. Currently doing Masters in Electrical and Electronic Engineering at Bangladesh University of
+                Engineering and Technology (BUET). </div>
+            <div class="flex flex-row justify-center md:justify-start lg:justify-start">
+                <div class="flex flex-row lg:ml-24 md:ml-12 justify-between text-white w-2/3 md:w-1/2 lg:w-1/2">
+                    <div class="flex flex-col  items-center">
+                        <div class="text-2xl md:text-6xl lg:text-8xl">45</div>
+                        <div class="text-xl">papers</div>
+                    </div>
+                    <div class="flex flex-col  items-center">
+                        <div class="text-2xl md:text-6xl lg:text-8xl">45</div>
+                        <div class="text-xl">papers</div>
+                    </div>
+                    <div class="flex flex-col  items-center">
+                        <div class="text-2xl md:text-6xl lg:text-8xl">45</div>
+                        <div class="text-xl">papers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lg:w-1/2 md:w-2/3 w-full flex lg:ml-40 md:ml-10">
+            <img class="w-screen h-1/2" src="images/test.png" alt="">
+        </div>
+
+
+    </sector>
+    <sector>
+        <div>Skills and Qualities</div>
+        <div class="flex flex-col items-center">
+            <div class="card w-96 bg-gradient-to-r to-[#011092] from-[#160040] shadow-xl border-2 border-cyan-500 text-white">
+                <div class="card-body">
+                    <img class="w-10 h-10" src="https://cdn-icons-png.flaticon.com/512/4228/4228953.png">
+
+                    <h2 class="card-title">Design & Simulation Software</h2>
+                    <ul>
+                        <li>COMSOL Multiphysics</li>
+                        <li>CST Microwave Studio</li>
+                        <li>ANSYS HFSS</li>
+                        <li>MATLAB</li>
+                        <li>Fritzing</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="card w-96 bg-gradient-to-r to-[#011092] from-[#160040] shadow-xl border-2 border-cyan-500 text-white">
+                <div class="card-body">
+                    <img class="w-10 h-10" src="https://cdn-icons-png.flaticon.com/512/4228/4228953.png">
+
+                    <h2 class="card-title">Design & Simulation Software</h2>
+                    <ul>
+                        <li>COMSOL Multiphysics</li>
+                        <li>CST Microwave Studio</li>
+                        <li>ANSYS HFSS</li>
+                        <li>MATLAB</li>
+                        <li>Fritzing</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="card w-96 bg-gradient-to-r to-[#011092] from-[#160040] shadow-xl border-2 border-cyan-500 text-white">
+                <div class="card-body">
+                    <img class="w-10 h-10" src="https://cdn-icons-png.flaticon.com/512/4228/4228953.png">
+
+                    <h2 class="card-title">Design & Simulation Software</h2>
+                    <ul>
+                        <li>COMSOL Multiphysics</li>
+                        <li>CST Microwave Studio</li>
+                        <li>ANSYS HFSS</li>
+                        <li>MATLAB</li>
+                        <li>Fritzing</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="card w-96 bg-gradient-to-r to-[#011092] from-[#160040] shadow-xl border-2 border-cyan-500 text-white">
+                <div class="card-body">
+                    <img class="w-10 h-10" src="https://cdn-icons-png.flaticon.com/512/4228/4228953.png">
+
+                    <h2 class="card-title">Design & Simulation Software</h2>
+                    <ul>
+                        <li>COMSOL Multiphysics</li>
+                        <li>CST Microwave Studio</li>
+                        <li>ANSYS HFSS</li>
+                        <li>MATLAB</li>
+                        <li>Fritzing</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </sector>
+    <sector>3</sector>
+    <sector>5</sector>
+    <sector>6</sector>
+    <sector>7</sector>
+</body>
+<script>
+    function floatingBox() {
+        const elementId = "floatingDiv";
+        setDivVisById(elementId);
+        removeDivVisById(elementId);
+    };
+
+    function setDivVisById(elementId) {
+        const element = document.getElementById(elementId);
+        element.classList.add('block');
+    }
+
+    function removeDivVisById(elementId) {
+        const element = document.getElementById(elementId);
+        element.classList.remove('hidden');
+    }
+</script>
+
+<div id="floatingDiv"
+    class="fixed hidden rounded-xl z-40 bg-blue-800 h-96 p-10 w-auto left-1/2 top-1/4 -translate-x-1/2">
+    <div class="flex flex-col content-center items-center ">
+        <p class="text-2xl font-bold text-blue-600">Log In</p>
+        <input type="email" placeholder="input Email here.."
+            class="form-input px-4 py-3 mb-2 bg-cyan-100 border-blue-900 border-2 rounded-2xl">
+        <input type="password" placeholder="input password here.."
+            class="form-input px-4 py-3 mb-2 border-blue-900 rounded-2xl">
+
+
+        <button onclick="closeFloatingBox()"
+            class="btn btn-primary mt-5 w-48 bg-green-600 hover:bg-green-700 border-none rounded-full text-white">Continue</button>
+    </div>
+</div>
+
+</html>
