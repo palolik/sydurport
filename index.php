@@ -1,3 +1,6 @@
+<?php
+session_start(); 
+?>
 <!doctype html>
 <html class="">
 
@@ -10,7 +13,7 @@
 
 </head>
 
-<body class="w-svw bg-gradient-to-r to-[#011092] from-[#160040]">
+<body class="m-0 bg-gradient-to-r to-[#011092] from-[#160040]">
     <!-- home page starts here -->
 <div class="w-16 h-60 bg-gradient-to-r to-[#011092] from-[#160040] z-30 fixed mt-72 rounded-r-[40px] pl-2 md:flex lg:flex flex-col justify-evenly hidden ">
  <?php
@@ -30,13 +33,12 @@
         </div>
         <div class="flex-none">
             <ul class="menu menu-horizontal px-1 hidden lg:flex md:flex text-xl text-blue-400">
-                <li><a>Home</a></li>
-                <li><a>About Me</a></li>
-                <li><a>Research</a></li>
-                <li><a>Projects</a></li>
-                <li><a id="nextButton" onclick="floatingBox()">Log in</a>
-                </li>
-
+                <li><a href="#home">Home</a></li>           
+                <li><a href="#research">Research</a></li>
+                <li><a href="#aboutme">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#gallary">Gallery</a></li>
+                <li><a id="nextButton" onclick="floatingBox()">Log in</a></li>
             </ul>
             <ul class="menu menu-horizontal px-1 flex lg:hidden md:hidden">
 
@@ -47,10 +49,11 @@
                         </summary>
                         <ul
                             class="right-1 p-0 bg-gradient-to-r to-[#011092] from-[#160040] lg:text-4xl text-xl md:text-4xl text-blue-400">
-                            <li  ><a >Home</a></li>
-                            <li><a>About Me</a></li>
-                            <li><a>Research</a></li>
-                            <li><a>Projects</a></li>
+                            <li><a href="#home">Home</a></li>           
+                <li><a href="#research">Research</a></li>
+                <li><a href="#aboutme">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#gallary">Gallery</a></li>
                             <li><a id="nextButton" onclick="floatingBox()">Log in</a>
                             </li>
                         </ul>
@@ -59,16 +62,15 @@
             </ul>
         </div>
     </div>
-    <sector class="w-screen h-screen flex lg:flex-row md:flex-row flex-col">
+    <sector id="home" class="w-screen h-screen flex lg:w-full lg:flex-row md:flex-row flex-col">
 
         <div class="mx-2 w-full md:w-1/2 lg:w-1/2 lg:ml-24 lg:mt-24 md:ml-12 md:mt-12">
-            <div class="text-4xl md:text-6xl lg:text-8xl text-cyan-500 font-extrabold">Resercher and Author</div>
-            <div class="text-lg md:text-lg  lg:text-xl text-cyan-200 font-semibold">Research experience in
-                metamaterials,
-                microring resonators, and photonics. Skilled in CST microwave studio, COMSOL multiphysics, Lumerical,
-                etc. photonics simulator software. Further skilled in MATLAB and programming languages like C, Python,
-                PHP, etc. Currently doing Masters in Electrical and Electronic Engineering at Bangladesh University of
-                Engineering and Technology (BUET). </div>
+        <?php
+            include("database.php");
+                if ($conn) {$sql = "SELECT * FROM home";$result = mysqli_query($conn, $sql);while ($row = mysqli_fetch_array($result)) { 
+                    echo "
+            <div class='text-4xl md:text-6xl lg:text-8xl text-cyan-500 font-extrabold'>".$row['title'] ."</div>
+            <div class='text-lg md:text-lg  lg:text-xl text-cyan-200 font-semibold'>".$row['subtitle'] ."</div> "; } } ?>
             <div class="flex flex-row justify-center md:justify-start lg:justify-start">
                 <div class="flex flex-row lg:ml-24 md:ml-12 justify-between text-white w-2/3 md:w-1/2 lg:w-1/2">
                     <div class="flex flex-col  items-center">
@@ -92,13 +94,17 @@
                 </div>
             </div>
         </div>
-        <div class="lg:w-1/2 md:w-2/3 w-full flex lg:ml-40 md:ml-10">
-            <img class="w-screen h-1/2 lg:h-full lg:w-fit" src="images/test.png" alt="">
+        <div class="lg:w-1/2 md:w-2/3 w-full flex  md:ml-10">
+        <?php
+            include("database.php");
+                if ($conn) {$sql = "SELECT * FROM home";$result = mysqli_query($conn, $sql);while ($row = mysqli_fetch_array($result)) { 
+                    echo "
+            <img class='w-11/12 h-1/2 lg:h-full lg:w-fit' src='./images/home/". $row['image'] ."'> ";}} ?>
         </div>
 
 
     </sector>
-    <sector class=" lg:h-screen flex flex-col items-center lg:justify-start mb-5">
+    <sector id="research" class=" lg:h-screen flex flex-col items-center lg:w-full lg:justify-start mb-5">
         <div class="text-4xl text-cyan-300 mb-8 lg:m-20 lg:text-6xl">Research</div>
         <div class="flex  w-11/12 h-5/6 flex-col items-center lg:flex-col lg:justify-center md:flex-row ">
             <div class="carousel w-full h-5/6">
@@ -130,7 +136,7 @@
               </div> -->
         </div>
     </sector>
-    <sector class=" lg:h-screen flex flex-col items-center lg:justify-start ">
+    <sector id="aboutme" class=" lg:h-screen flex flex-col items-center lg:w-full lg:justify-start ">
         <div class="text-4xl text-cyan-300 mb-8 lg:m-20 lg:text-6xl">Skills and Qualities</div>
         <div class="flex w-full p-10 flex-col justify-center items-center lg:flex-row md:flex-row">
             <div
@@ -197,7 +203,7 @@
             </div>
         </div>
     </sector>
-    <sector class=" lg:h-screen flex flex-col items-center lg:justify-start ">
+    <sector id="projects"  class=" lg:h-screen flex flex-col items-center  lg:w-full lg:justify-start ">
         <div class="text-4xl text-cyan-300 mb-8 lg:m-20 lg:text-6xl">Projects</div>
         <div class="flex  w-11/12 flex-col justify-center items-center lg:flex-row lg:justify-center md:flex-row">
             <div class="carousel carousel-center w-11/12 lg:w-2/3 md:w-2/3 p-4 space-x-4 ">
@@ -225,8 +231,7 @@
 
 
     </sector>
-
-    <sector class=" lg:h-screen flex flex-col items-center lg:justify-start ">
+    <sector id="gallery"  class=" lg:h-screen lg:w-full flex flex-col items-center lg:justify-start ">
         <div class="text-4xl text-cyan-300 mb-8 lg:m-20 lg:text-6xl">Gallery</div>
         <div class="flex flex-wrap flex-col items-center w-full lg:flex-col lg:h-4/6 md:h-4/6 h-[500px] md:flex-col ">
             <div class="carousel carousel-center w-5/6 rounded-box h-[480px] lg:h-full md:h-[520px]">
@@ -248,8 +253,8 @@
             </div>
         </div>
     </sector>
-    <sector class="">
-        <div class="flex lg:flex-row md:flex-row flex-col-reverse w-screen  lg:p-10 md:p-10 p-4 bg-gradient-to-r from-[#011092] to-[#160040]  text-white">
+   
+        <div class="flex lg:flex-row md:flex-row flex-col-reverse w-screen lg:w-full lg:p-10 md:p-10 p-4 bg-gradient-to-r from-[#011092] to-[#160040]  text-white">
             <div class="lg:w-2/4 md:w-2/4 flex lg:flex-row md:flex-row flex-col justify-evenly ">
                 <div class="flex flex-col items-center mb-2">
                     <h6 class="text-lg font-bold">Important Links</h6>
@@ -369,16 +374,31 @@
 <div id="floatingDiv"
     class="fixed hidden rounded-xl z-40 bg-gradient-to-r to-[#011092] from-[#160040] h-96 p-10 w-auto left-1/2 top-1/4 -translate-x-1/2">
     <div class="flex flex-col content-center items-center ">
-        <p class="text-2xl font-bold text-blue-600 mb-4 ">Log In</p>
-        <input type="email" placeholder="input Email here.."
+        
+      
+            <form class="form" action="login.php" method="post">
+            <p class="text-2xl font-bold text-blue-600 mb-4 ">Log In</p>
+     	<?php if (isset($_GET['error'])) { ?>
+     		<p class="error"><?php echo $_GET['error']; ?></p>
+     	<?php } ?>
+        <div>
+     	<label class="text-white">Email</label>
+     	<input type="text" name="uname" placeholder="input Email here.."
             class="form-input w-full px-4 py-3 mb-2 bg-cyan-100 border-blue-900 border-2 rounded-xl">
-        <input type="password" placeholder="input password here.."
-            class="form-input px-4 py-3 mb-2 border-blue-900 rounded-xl">
+        </div><div>
+     	<label class="text-white">Password</label>
+     	<input type="password" name="password" placeholder="input password here.."
+            class="form-input w-full px-4 py-3 mb-2 bg-cyan-100 border-blue-900 border-2 rounded-xl"><br>
+        </div><div>
+     	<button class="btn text-white align-center" type="submit">Login</button>
+        </div>
+		
+     </form>
 
-
-        <button onclick="closeFloatingBox()"
+        <!-- <button onclick="closeFloatingBox()"
             class="btn btn-primary mt-5 w-48 bg-green-600 hover:bg-green-700 border-none rounded-full text-white">Continue</button>
-    </div>
+  -->
+        </div> 
 </div>
 
 </html>

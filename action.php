@@ -34,7 +34,32 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-// Check if form is submitted and data exists
+if (isset($_POST['submithome']) && !empty($_FILES['image']['name'])) {
+
+
+  $title = mysqli_real_escape_string($conn, $_POST["title"]);
+  $subtitle = mysqli_real_escape_string($conn, $_POST["subtitle"]);
+  $image_name = basename($_FILES["image"]["name"]);
+  $target = "images/home/" . $image_name;
+
+  if (move_uploaded_file($_FILES["image"]["tmp_name"], $target)) {
+
+
+    $sql = "INSERT INTO home (title, subtitle, image)
+            VALUES ('$title', '$subtitle', '$image_name')";
+
+    // Execute the query and handle results
+    if (mysqli_query($conn, $sql)) {
+      
+      header("Location: admin.php");
+      
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+  } else {
+    echo "Sorry, there was an error uploading your image.";
+  }
+}
 if (isset($_POST['submitproject']) && !empty($_FILES['image']['name'])) {
 
   // Escape user input to prevent SQL injection
@@ -72,6 +97,8 @@ if (isset($_POST['submitpaper']) && !empty($_FILES['image']['name'])) {
   $title = mysqli_real_escape_string($conn, $_POST["title"]);
   $abstract = mysqli_real_escape_string($conn, $_POST["abstract"]);
   $date = mysqli_real_escape_string($conn, $_POST["date"]);
+  $pub = mysqli_real_escape_string($conn, $_POST["pub"]);
+  $pin = mysqli_real_escape_string($conn, $_POST["pin"]);
   $link = mysqli_real_escape_string($conn, $_POST["link"]);
 
   // Get image details
@@ -82,8 +109,8 @@ if (isset($_POST['submitpaper']) && !empty($_FILES['image']['name'])) {
   if (move_uploaded_file($_FILES["image"]["tmp_name"], $target)) {
 
     // Build the SQL query
-    $sql = "INSERT INTO papers (title, abstract, date, link, image)
-            VALUES ('$title', '$abstract', '$date', '$link', '$image_name')";
+    $sql = "INSERT INTO papers (title, abstract, date, pub, pin, link, image)
+            VALUES ('$title', '$abstract', '$date', '$pub', '$pin', '$link', '$image_name')";
 
     // Execute the query and handle results
     if (mysqli_query($conn, $sql)) {
