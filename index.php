@@ -118,10 +118,11 @@ session_start();
                                 src='./images/papers/". $row['image'] ."'></div>
                         <div class='lg:w-2/3 text-white m-1 lg:mx-10 md:mx-5 md:w-2/3'>
                             <p class='font-bold text-xl mb-1 lg:text-3xl md:text-3xl md:mb-5 lg:mb-5'>" . $row['title'] . "</p>
-                            <p class='text-sm lg:text-lg md:text-lg'>" . $row['abstract'] . "</p>
-                            <p>Published on: <span>" . $row['date'] . "</span></p>
-                            
-                            <a href='". $row['link'] ."' >go to site</a>
+                            <p class='text-sm lg:text-lg md:text-lg'>" . $row['abstract'] . "</p><br>
+                            <p class='font-bold'>Published in:   <span class='font-semibold'>  " . $row['pin'] . "</span></p>
+                            <p class='font-bold'>Published by:   <span class='font-semibold'>  " . $row['pub'] . "</span></p>
+                            <p class='font-bold'>Published on:   <span class='font-semibold'> " . $row['date'] . "</span></p><br>
+                            <a class='w-4 h-3 p-2 bg-blue-700 rounded-md' href='". $row['link'] ."' >go to site</a>
                         </div>
                     </div>
                 </div>"; } } ?>
@@ -144,7 +145,7 @@ session_start();
                 <div class="card-body md:px-2 lg:px-6">
                     <img class="w-16 h-16" src="https://cdn-icons-png.flaticon.com/512/4228/4228953.png">
 
-                    <h2 class="card-title">1Design & Simulation Software</h2>
+                    <h2 class="card-title">Design & Simulation Software</h2>
                     <ul>
                         <li>COMSOL Multiphysics</li>
                         <li>CST Microwave Studio</li>
@@ -161,11 +162,12 @@ session_start();
 
                     <h2 class="card-title">2Design & Simulation Software</h2>
                     <ul>
-                        <li>COMSOL Multiphysics</li>
-                        <li>CST Microwave Studio</li>
-                        <li>ANSYS HFSS</li>
-                        <li>MATLAB</li>
-                        <li>Fritzing</li>
+                        <li>Microcontroller</li>
+                        <li>Arduino</li>
+                        <li>NodeMCU</li>
+                        <li>ESP8266</li>
+                        <li>Sensors</li>
+                        <li>Modules</li>
                     </ul>
 
                 </div>
@@ -174,13 +176,14 @@ session_start();
                 <div class="card-body md:px-2 lg:px-6">
                     <img class="w-16 h-16" src="https://cdn-icons-png.flaticon.com/512/4228/4228953.png">
 
-                    <h2 class="card-title">Design & Simulation Software</h2>
+                    <h2 class="card-title">Programming Language</h2>
                     <ul>
-                        <li>COMSOL Multiphysics</li>
-                        <li>CST Microwave Studio</li>
-                        <li>ANSYS HFSS</li>
-                        <li>MATLAB</li>
-                        <li>Fritzing</li>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Python</li>
+                        <li>PHP</li>
+                        <li>Java Script</li>
+                        <li>HTML & CSS</li>
                     </ul>
 
                 </div>
@@ -190,13 +193,14 @@ session_start();
                 <div class="card-body md:px-2 lg:px-6">
                     <img class="w-16 h-16" src="https://cdn-icons-png.flaticon.com/512/4228/4228953.png">
 
-                    <h2 class="card-title">Design & Simulation Software</h2>
+                    <h2 class="card-title">Application Package</h2>
                     <ul>
-                        <li>COMSOL Multiphysics</li>
-                        <li>CST Microwave Studio</li>
-                        <li>ANSYS HFSS</li>
-                        <li>MATLAB</li>
-                        <li>Fritzing</li>
+                        <li>Microsoft Office</li>
+                        <li>Google Docs</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Mendeley</li>
+                        <li>Latex</li>
+                        <li>Origin Pro</li>
                     </ul>
 
                 </div>
